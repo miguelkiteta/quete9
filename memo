@@ -1,0 +1,89 @@
+
+<?php
+
+$valider=$_POST["inputPassword6"];
+
+if(isset($_POST['inputPassword6'])){
+    if(preg_match('#[a-z]#',$valider)){
+        echo 'c\'est une lettre';
+    }
+}
+// function passwordValider($password) {
+//     return preg_match('/[a-z]/', $password) //  1 minuscule
+//      && preg_match('/[A-Z]/', $password) // 1 majuscule
+//      && preg_match('/[0-9]/', $password) // 1 chiffre 
+//      && preg_match('/^[\w$@]{12,}$/', $password); // a 12 caractères ou plus
+// }
+
+// if(isset($valider)){
+//     if (preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password))
+//     if(filter_var($password, FILTER_VALIDATE_EMAIL))
+//        $message=" email valide</li>";
+//     else
+//        $message="e-mail non valide</li>";
+// }
+// var_dump(passwordValider('aB1@xy$z')); // true
+// // var_dump(passwordValider('aB1')); // false, n'a pas 12 caractères
+// // var_dump(passwordValider('AB1@XYZ')); // false, il n'a pas de lettre minuscule
+// // var_dump(passwordValider('ab1@xyz')); // false, il n'a pas de majuscule
+// // var_dump(passwordValider('ABc@xyz')); // false, n'a pas de chiffre
+ 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<?php include 'includes/header.php';?>
+</head>
+<body>
+     <form action="" method="POST">
+        <div class="row gl-5 align-items-center">
+        <div class="col-auto d-block">
+            <label for="inputPassword6" class="col-form-label">Mode de passe (12 caractère):</label>
+        </div>
+
+        <div class="col-auto">
+            <input type="text" name="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+    </form>   
+</body>
+</html>
+
+
+<?php
+    if(isset ($_POST['txt'])){
+        if(preg_match("/^a/",$_POST["txt"]) === true){
+            echo "correct";
+        }else{
+            echo "wrong";
+        }
+    }
+?>
+
+// function passwordValider($password) {
+//     return preg_match('/[a-z]/', $password) //  1 minuscule
+//      && preg_match('/[A-Z]/', $password) // 1 majuscule
+//      && preg_match('/[0-9]/', $password) // 1 chiffre 
+//      && preg_match('/^[\w$@]{12,}$/', $password); // a 12 caractères ou plus
+// }
+
+// if(isset($valider)){
+//     if (preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password))
+//     if(filter_var($password, FILTER_VALIDATE_EMAIL))
+//        $message=" email valide</li>";
+//     else
+//        $message="e-mail non valide</li>";
+// }
+// var_dump(passwordValider('aB1@xy$z')); // true
+// // var_dump(passwordValider('aB1')); // false, n'a pas 12 caractères
+// // var_dump(passwordValider('AB1@XYZ')); // false, il n'a pas de lettre minuscule
+// // var_dump(passwordValider('ab1@xyz')); // false, il n'a pas de majuscule
+// // var_dump(passwordValider('ABc@xyz')); // false, n'a pas de chiffre
+ 
